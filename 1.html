@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body> <center>
+<header>
+    <h1> Rishi Library Portal</h1>
+</header>
+<section id="librarian-section">
+    <h2>Admin Interface</h2>
+    <form action="admin_login.php" method="post">
+        <!-- Login Form -->
+        <label for="admin-username">Username:</n label>
+        <input type="text" id="admin-username" name="admin-username" required><next line>
+
+        
+        <label for="admin-password">Password:</n label>
+        <input type="password" id="admin-password" name="admin-password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <form action="add_book.php" method="post">
+        <label for="book-title">Book Title:</label>
+        <input type="text" id="book-title" name="book-title" required>
+        <button type="submit">Add Book</button>
+    </form>
+</section>
+<section id="user-section">
+    <h2>User Interface</h2>
+    <form action="user_login.php" method="post">
+        <!-- User Login Form -->
+        <label for="user-username">Username:</label>
+        <input type="text" id="user-username" name="user-username" required>
+        
+        <label for="user-password">Password:</label>
+        <input type="password" id="user-password" name="user-password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- User Registration Form -->
+    <form action="user_register.php" method="post">
+        <!-- Add user registration fields -->
+
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Add other User functions forms -->
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2023 Library Management System</p>
+</footer>
+
+</body></center>
+</html>
