@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Bus Ticket Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Samraaj Bus Booking Network</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Search Buses</a></li>
+        <li><a href="#">Book Tickets</a></li>
+        <li><a href="#">My Tickets</a></li>
+        <li><a href="#">Admin Login</a></li>
+        <li><a href="#">Consumer terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>India's Largest Bus Booking Online Platform</h2>
+      <p>One-single spot for buses, booking tickets, and manage your travel plans conveniently.</p>
+      <form action="#">
+        <label for="source">Pick-up:</label>
+        <input type="text" id="source" name="source" placeholder="Enter Pick-up city">
+        <label for="destination">Drop:</label>
+        <input type="text" id="destination" name="destination" placeholder="Enter Drop-by city">
+        <label for="travel-date">Travel Date:</label>
+        <input type="date" id="travel-date" name="travel-date">
+        <button type="submit">Search Buses</button>
+      </form>
+    </section>
+
+    <section id="bus-results">
+      <h2>Bus Search Results</h2>
+      <table>
+        <tr>
+          <th>Bus Name</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Samraaj Magnuz</td>
+          <td>09:45 AM</td>
+          <td>05:30 PM</td>
+          <td>Rs. 1350</td>
+          <td><a href="#">Book Now</a></td>
+        </tr>
+        <tr>
+          <td>Samraaj Imperial</td>
+          <td>10:15 AM</td>
+          <td>06:25 PM</td>
+          <td>Rs. 1500</td>
+          <td><a href="#">Book Now</a></td>
+        </tr>
+        <tr>
+          <td>Samraaj Majestic</td>
+          <td>11:15 AM</td>
+          <td>07:25 PM</td>
+          <td>Rs. 1850</td>
+          <td><a href="#">Book Now</a></td>
+       </tr>
+          <tr>
+          <td>Samraaj Renact</td>
+          <td>2:00 PM</td>
+          <td>10:15 PM</td>
+          <td>Rs. 1850</td>
+          <td><a href="#">Book Now</a></td>
+      </table>
+    </section>
+
+    <section id="book-ticket">
+      <h2>Book Your Ticket</h2>
+      <form action="#">
+        <label for="passenger-name">Passenger Name:</label>
+        <input type="text" id="passenger-name" name="passenger-name" placeholder="Enter passenger name">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email address">
+        <label for="contact-number">Contact Number:</label>
+        <input type="tel" id="contact-number" name="contact-number" placeholder="Enter contact number">
+        <label for="seat-selection">Seat Selection:</label>
+        <select id="seat-selection" name="seat-selection">
+          <option value="1">Window Seat</option>
+          <option value="2">Aisle Seat</option>
+          <option value="3">Middle Seat</option>
+        </select>
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method">
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+        <button type="submit">Book Ticket</button>
+      </form>
+    </section>
+
+    <section id="my-tickets">
+      <h2>My Tickets</h2>
+      <table>
+        </tr>
+          <th>Ticket Number</th>
+          <th>   Bus Name  </th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Travel Date</th>
+          <th>Status
