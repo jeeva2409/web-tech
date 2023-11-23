@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Link Colors Example</title>
+    <style>
+        /* Define link colors for different states */
+        a:link {
+            color: blue; /* Color for normal (unvisited) links */
+        }
+
+        a:visited {
+            color: purple; /* Color for visited links */
+        }
+
+        a:hover {
+            color: red; /* Color when the link is being hovered over */
+        }
+
+        a:active {
+            color: green; /* Color when the link is being clicked */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>HTML Link Colors Example</h2>
+
+    <p>
+        <a href="https://www.example.com">Normal Link</a><br>
+        <a href="https://www.example.com" target="_blank">Link with Target (_blank)</a>
+    </p>
+
+</body>
+</html>
