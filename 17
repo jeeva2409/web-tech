@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .voter-registration, .candidate-info, .voting-process {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .voter-registration-form,
+        .voting-form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .voter-registration-form label,
+        .voting-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .voter-registration-form input,
+        .voter-registration-form select,
+        .voting-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .voter-registration-form button,
+        .voting-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .voter-registration-form button:hover,
+        .voting-form button:hover {
+            background-color: #45a049;
+        }
+
+        .candidate-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .candidate-info li {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .voting-process-form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .voting-process-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .voting-process-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .voting-process-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .voting-process-form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>E-Voting System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Voter Registration</a></li>
+                <li><a href="#">Candidates</a></li>
+                <li><a href="#">Vote Now</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="voter-registration">
+        <h2>Voter Registration</h2>
+        <div class="voter-registration-form">
+            <form>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+
+                <label for="nationalID">National ID:</label>
+                <input type="text" id="nationalID" placeholder="Enter your national ID">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your address">
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="candidate-info">
+        <h2>Candidates</h2>
+        <ul>
+            <li>
+                <h3>Candidate 1</h3>
+                <p>Party: XYZ Party</p>
+                <p>Position: President</p>
+            </li>
+            <li>
+                <h3>Candidate 2</h3>
+                <p>Party: ABC Party</p>
+                <p>Position: Vice President</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="voting-process">
+        <h2>Vote Now</h2>
+        <div class="voting-process-form">
+            <form>
+                <label for="selectedCandidate">Select Candidate:</label>
+                <select id="selectedCandidate">
+                    <option value="candidate1">Candidate 1</option>
+                    <option value="candidate2">Candidate 2</option>
+              
+                </select>
+
+                <button type="submit">Vote</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 E-Voting System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
