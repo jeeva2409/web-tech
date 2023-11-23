@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Example</title>
+</head>
+<body>
+
+    <h2>Switch Statement Example</h2>
+
+    <script>
+        // JavaScript code with a switch statement
+        function displayMessage(day) {
+            var message;
+
+            switch (day) {
+                case 1:
+                    message = "It's Monday!";
+                    break;
+                case 2:
+                    message = "It's Tuesday!";
+                    break;
+                case 3:
+                    message = "It's Wednesday!";
+                    break;
+                case 4:
+                    message = "It's Thursday!";
+                    break;
+                case 5:
+                    message = "It's Friday!";
+                    break;
+                case 6:
+                    message = "It's Saturday!";
+                    break;
+                case 7:
+                    message = "It's Sunday!";
+                    break;
+                default:
+                    message = "Invalid day!";
+            }
+
+            alert(message);
+        }
+
+        // Example usage
+        displayMessage(3); // Change the argument to test different cases
+    </script>
+
+</body>
+</html>
