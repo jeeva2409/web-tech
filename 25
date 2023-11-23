@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Road Breakdown Assistance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .assistance-request, .services, .contact {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .assistance-request button,
+        .contact button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .assistance-request button:hover,
+        .contact button:hover {
+            background-color: #45a049;
+        }
+
+        .services img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>On-Road Breakdown Assistance</h1>
+        <nav>
+            <ul>
+                <li><a href="#assistance-request">Request Assistance</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="assistance-request" class="assistance-request">
+        <h2>Request Assistance</h2>
+        <p>Experiencing a breakdown? Click the button to request assistance:</p>
+        <button onclick="requestAssistance()">Request Assistance</button>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div>
+            <img src="tow-truck.jpg" alt="Tow Truck">
+            <p>Towing Service</p>
+        </div>
+
+        <div>
+            <img src="mechanic.jpg" alt="Mechanic">
+            <p>On-Site Mechanic</p>
+        </div>
+        <!-- Add more services as needed -->
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or assistance, feel free to contact us:</p>
+        <button onclick="openContactForm()">Contact Form</button>
+    </section>
+
+    <script>
+        function requestAssistance() {
+            alert("Assistance requested! Help is on the way."
+        }
+
+        function openContactForm() {
+            alert("Opening contact form!");
+  
+        }
+    </script>
+
+</body>
+</html>
