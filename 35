@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words Converter</title>
+</head>
+<body>
+
+    <h2>Number to Words Converter</h2>
+
+    <form method="post" action="convertNumber.jsp">
+        Enter a number: <input type="text" name="inputNumber" required>
+        <input type="submit" value="Convert">
+    </form>
+
+    <p>
+        <%-- Use Java code to convert the number to words --%>
+        <% String inputNumberStr = request.getParameter("inputNumber");
+           if (inputNumberStr != null && !inputNumberStr.isEmpty()) {
+               try {
+                   int inputNumber = Integer.parseInt(inputNumberStr);
+                   String result = convertToWords(inputNumber);
+                   out.println("Number in Words: " + result);
+               } catch (NumberFormatException e) {
+                   out.println("Invalid input. Please enter a valid number.");
+               }
+           }
+        %>
+    </p>
+
+    <%!
+        // Java method to convert a number to words
+        public String convertToWords(int number) {
+            String[] units = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+            String[] teens = {"", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+            String[] tens = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+
+            String words = "";
+
+            // Handle thousands
+            if (number >= 1000) {
+                words += units[number / 1000] + " Thousand ";
+                number %= 1000;
+            }
+
+            // Handle hundreds
+            if (number >= 100) {
+                words += units[number / 100] + " Hundred ";
+                number %= 100;
+            }
+
+            // Handle tens and units
+            if (number >= 10 && number <= 19) {
+                words += teens[number % 10];
+            } else {
+                words += tens[number / 10] + " " + units[number % 10];
+            }
+
+            return words.trim();
+        }
+    %>
+
+</body>
+</html>
