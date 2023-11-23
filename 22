@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .garbage-collection, .garbage-report, .contact {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .garbage-collection button,
+        .garbage-report button,
+        .contact button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .garbage-collection button:hover,
+        .garbage-report button:hover,
+        .contact button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Garbage Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#garbage-collection">Garbage Collection</a></li>
+                <li><a href="#garbage-report">Garbage Report</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="garbage-collection" class="garbage-collection">
+        <h2>Garbage Collection</h2>
+        <p>Click the button to request garbage collection:</p>
+        <button onclick="requestGarbageCollection()">Request Collection</button>
+    </section>
+
+    <section id="garbage-report" class="garbage-report">
+        <h2>Garbage Report</h2>
+        <p>Click the button to view the garbage report:</p>
+        <button onclick="viewGarbageReport()">View Report</button>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or assistance, feel free to contact us:</p>
+        <button onclick="openContactForm()">Contact Form</button>
+    </section>
+
+    <script>
+        function requestGarbageCollection() {
+            alert("Garbage collection requested!");
+        }
+
+        function viewGarbageReport() {
+            alert("Viewing garbage report!");
+        }
+
+        function openContactForm() {
+            alert("Opening contact form!");.
+        }
+    </script>
+
+</body>
+</html>
