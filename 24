@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .destination-list, .package-details, .booking-form, .contact {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .destination-list img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .booking-form button,
+        .contact button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover,
+        .contact button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Travel Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="#destination-list">Destinations</a></li>
+                <li><a href="#package-details">Package Details</a></li>
+                <li><a href="#booking-form">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="destination-list" class="destination-list">
+        <h2>Popular Destinations</h2>
+        <div>
+            <img src="destination1.jpg" alt="Destination 1">
+            <p>Explore the beauty of Destination 1.</p>
+        </div>
+
+        <div>
+            <img src="destination2.jpg" alt="Destination 2">
+            <p>Experience the charm of Destination 2.</p>
+        </div>
+        <!-- Add more destinations as needed -->
+    </section>
+
+    <section id="package-details" class="package-details">
+        <h2>Package Details</h2>
+        <p>Discover our exclusive travel packages tailored for you.</p>
+        <!-- Include package details here -->
+    </section>
+
+    <section id="booking-form" class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="destination1">Destination 1</option>
+                <option value="destination2">Destination 2</option>
+            </select>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to us!</p>
+        <button onclick="openContactForm()">Contact Form</button>
+    </section>
+
+    <script>
+        function openContactForm() {
+            alert("Opening contact form!");
+        }
+    </script>
+
+</body>
+</html>
+4
