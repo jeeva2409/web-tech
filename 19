@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Medical Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .appointment, .services, .contact {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .appointment-form,
+        .contact-form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .appointment-form label,
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .appointment-form input,
+        .appointment-form select,
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .appointment-form button,
+        .contact-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .appointment-form button:hover,
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .services li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Animal Medical Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="appointment">
+        <h2>Book an Appointment</h2>
+        <div class="appointment-form">
+            <form>
+                <label for="petName">Pet's Name:</label>
+                <input type="text" id="petName" placeholder="Enter your pet's name">
+
+                <label for="petType">Pet Type:</label>
+                <select id="petType">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate">
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Vaccinations</li>
+            <li>General Check-ups</li>
+            <li>Surgery</li>
+            <li>Dental Care</li>
+            <li>Emergency Care</li>
+            <!-- Add more services as needed -->
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Type your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Animal Medical Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
