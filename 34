@@ -1,0 +1,22 @@
+<%@ page import="java.util.Date" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+</head>
+<body>
+
+    <h2>Current Date and Time</h2>
+
+    <p>
+        <%-- Use Java code to get the current date and time --%>
+        <% Date currentDate = new Date(); %>
+        <%-- Use HTML to display the result --%>
+        Current Date and Time: <%= currentDate %>
+    </p>
+
+</body>
+</html>
