@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Selection</title>
+</head>
+<body>
+
+    <h2>Subject Selection</h2>
+
+    <form id="subjectForm" onsubmit="return submitForm();" onreset="resetForm();">
+        <input type="radio" id="java" name="subject" value="Java">
+        <label for="java">Java</label>
+
+        <input type="radio" id="unix" name="subject" value="UNIX">
+        <label for="unix">UNIX</label>
+
+        <input type="radio" id="ddbms" name="subject" value="DDBMS">
+        <label for="ddbms">DDBMS</label>
+
+        <input type="radio" id="oose" name="subject" value="OOSE">
+        <label for="oose">OOSE</label>
+
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        function submitForm() {
+            var selectedSubject = document.querySelector('input[name="subject"]:checked');
+
+            if (!selectedSubject) {
+                alert("Please select a subject.");
+                return false; 
+            }
+
+            
+            var existingCookie = getCookie("selectedSubject");
+            if (existingCookie && existingCookie === selectedSubject.value) {
+                alert("Duplicate selection. Please choose a different subject.");
+                return false;
+            }
+
+     
+            document.cookie = "selectedSubject=" + selectedSubject.value;
+            return true; 
+        }
+
+        function resetForm() {
+            document.cookie = "selectedSubject=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+                if (name === cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            return null;
+        }
+    </script>
+
+</body>
+</html>
