@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress and Meter Tags Example</title>
+</head>
+<body>
+
+    <h2>Progress Tag Example</h2>
+    <p>Downloading: <progress id="downloadProgress" value="50" max="100"></progress></p>
+
+    <h2>Meter Tag Example</h2>
+    <p>Storage Used: <meter id="storageMeter" value="70" min="0" max="100">70%</meter></p>
+
+    <script>
+        // Example of updating the progress dynamically
+        var downloadProgress = document.getElementById("downloadProgress");
+        var incrementButton = document.createElement("button");
+        incrementButton.textContent = "Increment Progress";
+        incrementButton.addEventListener("click", function() {
+            if (downloadProgress.value < downloadProgress.max) {
+                downloadProgress.value += 10;
+            }
+        });
+        document.body.appendChild(incrementButton);
+
+        // Example of updating the meter dynamically
+        var storageMeter = document.getElementById("storageMeter");
+        var decrementButton = document.createElement("button");
+        decrementButton.textContent = "Decrement Storage";
+        decrementButton.addEventListener("click", function() {
+            if (storageMeter.value > storageMeter.min) {
+                storageMeter.value -= 10;
+                storageMeter.textContent = storageMeter.value + "%";
+            }
+        });
+        document.body.appendChild(decrementButton);
+    </script>
+
+</body>
+</html>
