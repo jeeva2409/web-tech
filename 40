@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class vs ID Selector Example</title>
+    <style>
+        /* Style for the class selector */
+        .classSelector {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Style for the ID selector */
+        #idSelector {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Class vs ID Selector Example</h2>
+
+    <p class="classSelector">This paragraph uses the class selector.</p>
+
+    <p id="idSelector">This paragraph uses the ID selector.</p>
+
+</body>
+</html>
