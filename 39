@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator Object Example</title>
+</head>
+<body>
+
+    <h2>Navigator Object Example</h2>
+
+    <p id="browserInfo"></p>
+
+    <script>
+        // Accessing the Navigator object
+        var navigatorInfo = "Browser Name: " + navigator.appName + "<br>";
+        navigatorInfo += "Browser Version: " + navigator.appVersion + "<br>";
+        navigatorInfo += "Platform: " + navigator.platform;
+
+        // Displaying the information on the webpage
+        document.getElementById("browserInfo").innerHTML = navigatorInfo;
+    </script>
+
+</body>
+</html>
