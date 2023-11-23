@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Object Example</title>
+</head>
+<body>
+
+    <h2 id="demoHeading">Element Object Example</h2>
+
+    <p id="demoParagraph">This is a sample paragraph.</p>
+
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        function changeContent() {
+
+            var headingElement = document.getElementById("demoHeading");
+            var paragraphElement = document.getElementById("demoParagraph");
+
+            headingElement.innerHTML = "New Heading Content";
+            paragraphElement.innerHTML = "This is the updated paragraph content.";
+
+            headingElement.style.color = "blue";
+            paragraphElement.style.fontWeight = "bold";
+        }
+    </script>
+
+</body>
+</html>
