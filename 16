@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Complaint Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .user-registration, .complaint-submission, .complaint-tracking {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .user-registration-form,
+        .complaint-submission-form,
+        .complaint-tracking-form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-registration-form label,
+        .complaint-submission-form label,
+        .complaint-tracking-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .user-registration-form input,
+        .user-registration-form select,
+        .complaint-submission-form input,
+        .complaint-submission-form select,
+        .complaint-tracking-form input,
+        .complaint-tracking-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .user-registration-form button,
+        .complaint-submission-form button,
+        .complaint-tracking-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .user-registration-form button:hover,
+        .complaint-submission-form button:hover,
+        .complaint-tracking-form button:hover {
+            background-color: #45a049;
+        }
+
+        .complaint-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .complaint-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .complaint-list th, .complaint-list td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .complaint-list th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Online Complaint Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Submit a Complaint</a></li>
+                <li><a href="#">Track Complaints</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="user-registration">
+        <h2>User Registration</h2>
+        <div class="user-registration-form">
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="complaint-submission">
+        <h2>Submit a Complaint</h2>
+        <div class="complaint-submission-form">
+            <form>
+                <label for="subject">Complaint Subject:</label>
+                <input type="text" id="subject" placeholder="Enter the subject">
+
+                <label for="category">Complaint Category:</label>
+                <select id="category">
+                    <option value="billing">Billing Issues</option>
+                    <option value="service">Service Problems</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="description">Complaint Description:</label>
+                <textarea id="description" placeholder="Describe your complaint"></textarea>
+
+                <button type="submit">Submit Complaint</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="complaint-tracking">
+        <h2>Track Complaints</h2>
+        <div class="complaint-tracking-form">
+            <form>
+                <label for="trackingNumber">Tracking Number:</label>
+                <input type="text" id="trackingNumber" placeholder="Enter your tracking number">
+
+                <button type="submit">Track Complaint</button>
+            </form>
+        </div>
+
+        <div class="complaint-list">
+            <h3>Complaints List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tracking Number</th>
+                        <th>Subject</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Display complaint details here -->
+                    <tr>
+                        <td>12345</td>
+                        <td>Billing Issue</td>
+                        <td>Billing</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>54321</td>
+                        <td>Service Problem</td>
+                        <td>Service</td>
+                        <td>Resolved</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Online Complaint Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
